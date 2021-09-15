@@ -1,0 +1,19 @@
+{
+  "name": "nvdsb",
+  "version": "1.0.0",
+  "description": "NodeJS, Vue, Docker, SQL, blockchain ## Hophelie B, Bertrand B, Killian M, Pierre C",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ki2lian/lpdw-nvdsql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ki2lian/lpdw-nvdsql/issues"
+  },
+  "homepage": "https://github.com/Ki2lian/lpdw-nvdsql#readme"
+}
