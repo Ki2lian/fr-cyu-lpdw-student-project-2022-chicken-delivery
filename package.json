@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Ki2lian/lpdw-nvdsql/issues"
   },
-  "homepage": "https://github.com/Ki2lian/lpdw-nvdsql#readme"
+  "homepage": "https://github.com/Ki2lian/lpdw-nvdsql#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
