@@ -37,18 +37,33 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
 
+
+
 //Test DB
 
 db.authenticate()
   .then(() => console.log('Database connected...'))
   .catch(err => console.log('error: '+err))
 
-const{ City, entrepot } = require('./models/index')
+const{ warehouse, driver, truck, logTemp,transfer } = require('./models/index');
+const logtemp = require('./models/logTemp');
 
-entrepot.belongsTo(City,{
-  foreignKey:"CityId",
-  as:"City"
+logTemp.belongsTo(truck,{
+  foreignKey:"fk_Truck",
+  as:"idTruck"
 })
 
+transfer.belongsTo(truck,{
+  foreignKey:"fk_Truck",
+  as:"idTruck"
+})
+transfer.belongsTo(driver,{
+  foreignKey:"fk_driver",
+  as:"idDriver"
+})
+transfer.belongsTo(warehouse,{
+  foreignKey:"fk_warehouse",
+  as:"idWarehouse"
+})
   db.sync()
 
