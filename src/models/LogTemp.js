@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize')
+const { Truck } = require('.')
 const db = require('../../config/database')
 
 const Logtemp = db.define('logtemp', {

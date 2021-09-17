@@ -3,9 +3,9 @@ const app = express()
 const { Sequelize } = require('sequelize')
 const bodyParser = require('body-parser')
 const port = 3000
-const router = require('./routes/router_warehouse')
+const { router_warehouse, router_driver, router_truck, router_logtemp, router_transfer } = require('./routes')
 
-app.use(router)
+app.use(router_warehouse, router_driver, router_truck, router_logtemp, router_transfer)
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
