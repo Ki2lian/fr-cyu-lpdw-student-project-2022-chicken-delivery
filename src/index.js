@@ -19,13 +19,11 @@ db.authenticate()
 
 const { Warehouse, Driver, Truck, LogTemp } = require('./models')
 
-LogTemp.hasMany(Truck)
-
 // app.get('/', (req, res) => {
-//     res.send('Index of Chicken Logistics')
-//     // app.use(router)
-// })
-
+    //     res.send('Index of Chicken Logistics')
+    //     // app.use(router)
+    // })
+    
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })

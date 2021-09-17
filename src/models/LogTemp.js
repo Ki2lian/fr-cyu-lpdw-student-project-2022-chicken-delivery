@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize')
 const db = require('../../config/database')
-// const Truck = require('./Truck')
 
 const Logtemp = db.define('logtemp', {
     Temp: {
@@ -16,7 +15,5 @@ const Logtemp = db.define('logtemp', {
         type: Sequelize.STRING
     }
 })
-
-// Logtemp.hasOne(Truck)
 
 module.exports = Logtemp
