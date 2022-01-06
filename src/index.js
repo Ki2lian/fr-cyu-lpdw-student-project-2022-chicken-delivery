@@ -19,10 +19,10 @@ db.authenticate()
 
 const { Warehouse, Driver, Truck, LogTemp } = require('./models')
 
-// app.get('/', (req, res) => {
-    //     res.send('Index of Chicken Logistics')
-    //     // app.use(router)
-    // })
+app.get('/', (req, res) => {
+    res.send('Index of Chicken Logistics')
+    app.use(router)
+})
     
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
