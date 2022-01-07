@@ -1,7 +1,7 @@
-module.exports = {
-    router_warehouse: require('./router_warehouse'),
-    router_driver: require('./router_driver'),
-    router_truck: require('./router_truck'),
-    router_logtemp: require('./router_logtemp'),
-    router_transfer: require('./router_transfer')
+module.exports = ( app ) => {
+    require('./router_warehouse')(app)
+    require('./router_driver')(app)
+    require('./router_truck')(app)
+    require('./router_logtemp')(app)
+    require('./router_transfer')(app)
 }

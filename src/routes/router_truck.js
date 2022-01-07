@@ -1,15 +1,10 @@
-const express = require('express')
-const router = express.Router()
+module.exports = app => {
+    const trucks = require('../controllers/truck.js')
+    let router = require('express').Router()
+    
+    router.get(`/`, trucks.findAll)
+    router.get(`/:id`, trucks.findOne)
+    router.post('/create', trucks.create)
 
-const db = require('../../config/database')
-const { Truck } = require('../models')
-
-router.get('/trucks', (req, res) => {
-    Truck.findAll()
-        .then(trucks => {
-            res.json(trucks)
-        })
-        .catch(err => console.log('Error : ' +err))
-})
-
-module.exports = router
+    app.use('/api/trucks', router)
+}

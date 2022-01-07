@@ -4,7 +4,7 @@
   "description": "Outil de suivi de livraison pour Chicken Logistics",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon src/index.js"
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ki2lian/lpdw-nvdsql#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mariadb": "^2.5.4",
     "mysql2": "^2.3.0",

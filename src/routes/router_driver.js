@@ -1,15 +1,10 @@
-const express = require('express')
-const router = express.Router()
+module.exports = app => {
+    const drivers = require('../controllers/driver.js')
+    let router = require('express').Router()
+    
+    router.get(`/`, drivers.findAll)
+    router.get(`/:id`, drivers.findOne)
+    router.post('/create', drivers.create)
 
-const db = require('../../config/database')
-const { Driver } = require('../models')
-
-router.get('/drivers', (req, res) => {
-    Driver.findAll()
-        .then(drivers => {
-            res.json(drivers)
-        })
-        .catch(err => console.log('Error : ' +err))
-})
-
-module.exports = router
+    app.use('/api/drivers', router)
+}
