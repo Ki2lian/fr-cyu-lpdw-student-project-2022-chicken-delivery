@@ -40,8 +40,13 @@ exports.create = (req, res) => {
     })
     .then( data => {
         if (!data) {
-            res.status(404).send({message: `Error occured`})
-            return
+            // res.status(404).send({message: `Error occured`})
+            // return
+            data = {
+                id: 0,
+                Hash: "initHash",
+                transfersId: 0
+            }
         }
         const stringtoHash = `${data.id}${data.Hash}${data.transfersId}`
         hash = crypto.createHash('sha512').update(stringtoHash).digest('hex')
